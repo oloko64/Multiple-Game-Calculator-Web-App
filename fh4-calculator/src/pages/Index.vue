@@ -123,6 +123,7 @@
 export default {
   data () {
     return {
+      drawer: false,
       weight: '',
       weightDis: '',
       stiffness: '20',
