@@ -2,7 +2,7 @@
   "name": "fh4-calc",
   "version": "0.0.1",
   "description": "A Quasar Framework app",
-  "productName": "forza-horizon-4-tunning-calculator",
+  "productName": "Forza Horizon 4 Tunning Calculator",
   "author": "OLoko64 <naldoepingo1@gmail.com>",
   "private": true,
   "scripts": {
