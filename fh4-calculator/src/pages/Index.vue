@@ -141,8 +141,8 @@ export default {
       this.susFro = (this.weight * (this.stiffness / 100) * ((this.weightDis) / 100)).toFixed(2);
       this.susRea = (this.weight * (this.stiffness / 100) * ((100 - this.weightDis) / 100)).toFixed(2);
 
-      this.damFro = (this.stiffness * (this.weightDis / 100)).toFixed(1);
-      this.damRea = (this.stiffness * ((100 - this.weightDis) / 100)).toFixed(1);
+      this.damFro = (this.maxBar * (this.weightDis / 100)).toFixed(1);
+      this.damRea = (this.maxBar * ((100 - this.weightDis) / 100)).toFixed(1);
 
       this.rebFro = (this.damFro * 0.5).toFixed(1);
       this.rebRea = (this.damRea * 0.5).toFixed(1);
