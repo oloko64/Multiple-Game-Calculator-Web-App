@@ -68,7 +68,7 @@
       </q-drawer>
 
     <q-page-container>
-      <q-img class="header-image absolute-center" src="../assets/fh4.jpg"/>
+      <q-img class="header-image absolute-center" src="https://i.imgur.com/gxGP8pk.jpg"/>
       <keep-alive>
         <router-view />
       </keep-alive>
