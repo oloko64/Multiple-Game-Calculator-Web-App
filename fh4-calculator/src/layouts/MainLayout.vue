@@ -23,6 +23,18 @@
       >
         <q-scroll-area class="fit">
           <q-list padding class="menu-list">
+
+            <q-item clickable @click="homeURL()" v-ripple>
+              <q-item-section avatar>
+                <q-icon name="home" />
+              </q-item-section>
+
+              <q-item-section>
+                Home
+              </q-item-section>
+            </q-item>
+
+
             <q-item clickable @click="gitURL()">
               <q-item-section avatar>
                 <q-icon name="list" />
@@ -30,16 +42,6 @@
 
               <q-item-section>
                 Formula
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-ripple>
-              <q-item-section avatar>
-                <q-icon name="help" />
-              </q-item-section>
-
-              <q-item-section>
-                About
               </q-item-section>
             </q-item>
 
@@ -53,7 +55,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item clickable v-ripple>
+            <!-- <q-item clickable v-ripple>
               <q-item-section avatar>
                 <q-icon name="drafts" />
               </q-item-section>
@@ -61,8 +63,8 @@
               <q-item-section>
                 Drafts
               </q-item-section>
+            </q-item> -->
 
-            </q-item>
           </q-list>
         </q-scroll-area>
       </q-drawer>
@@ -90,6 +92,9 @@ export default {
     },
     otherProj(){
       window.open("https://github.com/OLoKo64")
+    },
+    homeURL(){
+      location.href='/'
     }
   }
 }
