@@ -68,6 +68,7 @@
       </q-drawer>
 
     <q-page-container>
+      <q-img class="header-image absolute-center" src="../assets/fh4.jpg"/>
       <keep-alive>
         <router-view />
       </keep-alive>
@@ -93,3 +94,12 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.header-image{
+  height: 100%;
+  z-index: -1;
+  opacity: 0.08;
+  filter: grayscale(100%);
+}
+</style>
