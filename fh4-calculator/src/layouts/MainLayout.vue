@@ -33,7 +33,7 @@
             </q-item>
 
             <q-item clickable @click="homeURL()" v-ripple>
-              <q-item-section avatar>
+              <q-item-section>
                 <q-icon name="home" />
               </q-item-section>
 
