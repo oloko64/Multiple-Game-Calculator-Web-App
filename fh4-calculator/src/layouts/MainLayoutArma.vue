@@ -11,7 +11,7 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
         <q-toolbar-title>
-          Forza Horizon 4 Tunning Calculator
+          Arma 3 Fov Calculator
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -25,8 +25,8 @@
             <q-item-section> </q-item-section>
           </q-item>
 
-          <!-- <q-item clickable @click="homeURL()" v-ripple> -->
-            <!-- <q-item-section avatar>
+          <!-- <q-item clickable @click="homeURL()" v-ripple>
+            <q-item-section avatar>
               <q-icon name="home" />
             </q-item-section>
 
@@ -35,7 +35,7 @@
             </q-item-section>
           </q-item> -->
 
-          <q-item clickable @click="gitURL()">
+          <!-- <q-item clickable @click="gitURL()">
             <q-item-section avatar>
               <q-icon name="list" />
             </q-item-section>
@@ -43,15 +43,15 @@
             <q-item-section>
               Formula
             </q-item-section>
-          </q-item>
+          </q-item> -->
 
-          <q-item clickable v-ripple @click="fovCalc()">
+          <q-item clickable v-ripple @click="forCal()">
             <q-item-section avatar>
               <q-icon name="send" />
             </q-item-section>
 
             <q-item-section>
-              Arma 3 Fov Calculator
+              Forza Horizon 4 Calculator
             </q-item-section>
           </q-item>
 
@@ -79,7 +79,7 @@
     </q-drawer>
 
     <q-page-container>
-      <q-img class="header-image absolute-center" src="../assets/fh4.jpg" />
+      <q-img class="header-image absolute-center" src="../assets/arma3.jpg" />
       <keep-alive>
         <router-view />
       </keep-alive>
@@ -89,7 +89,7 @@
 
 <script>
 export default {
-  name: "MainLayout",
+  name: "MainLayoutArma",
   data() {
     return {
       leftDrawerOpen: false
@@ -104,11 +104,8 @@ export default {
     otherProj() {
       window.open("https://github.com/OLoKo64");
     },
-    // homeURL() {
-    //   location.href = "/";
-    // },
-    fovCalc(){
-            location.href = "/#/fov-calculator";
+    forCal() {
+      location.href = "/#/";
     }
   }
 };
