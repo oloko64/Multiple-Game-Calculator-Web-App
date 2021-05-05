@@ -24,6 +24,14 @@
         <q-scroll-area class="fit">
           <q-list padding class="menu-list">
 
+            <q-item>
+              <q-item-section avatar>
+              </q-item-section>
+
+              <q-item-section>
+              </q-item-section>
+            </q-item>
+
             <q-item clickable @click="homeURL()" v-ripple>
               <q-item-section avatar>
                 <q-icon name="home" />
