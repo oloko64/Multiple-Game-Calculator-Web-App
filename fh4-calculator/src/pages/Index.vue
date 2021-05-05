@@ -21,7 +21,7 @@
           clearable
           :maxlength="2"
           v-model="weightDis"
-          label="Weight Distribuition (%)"
+          label="Weight Distribution (%)"
         />
 
         <div>
