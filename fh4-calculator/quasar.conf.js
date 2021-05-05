@@ -113,12 +113,12 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: `forza-horizon-4-tunning-calculator`,
-        short_name: `forza-horizon-4-tunning-calculator`,
-        description: `A Quasar Framework app`,
+        name: `Forza Horizon 4 Tunning Calculator`,
+        short_name: `FH4 Tunning Calcuator`,
+        description: `A Basic Tunning Calculator`,
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#ffffff',
+        background_color: '#000000',
         theme_color: '#027be3',
         icons: [
           {
