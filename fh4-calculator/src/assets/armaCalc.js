@@ -1,14 +1,4 @@
-// $(document).ready(function() {
-//   document.getElementById("width").value = screen.width;
-
-//   document.getElementById("height").value = screen.height;
-// });
-
 export function calc_value(height, width, hfov) {
-//   var height = document.getElementById("height").value;
-//   var width = document.getElementById("width").value;
-//   var hfov = document.getElementById("hfov").value;
-
   if (height == "0" || height == "") {
     alert("'Height value' field is not filled.");
     return;
@@ -40,15 +30,8 @@ export function calc_value(height, width, hfov) {
 
   var fovLeft = ((fovTop / height) * width).toFixed(2);
 
-  // document.getElementById('fovTop').value = fovTop;
-
-  // document.getElementById('fovLeft').value = fovLeft;
-
   console.log(fovTop);
   console.log(fovLeft);
-
-  //document.forms[0].fovTop.value = fovTop;
-  //document.forms[1].fovLeft.value = fovLeft;
 }
 
 function ra_de(value) {
@@ -61,8 +44,4 @@ function de_ra(value) {
   var pi = Math.PI;
   var de_ra = eval(value) * (pi / 180);
   return de_ra;
-}
-
-export function teste(){
-  console.log('funciona')
 }
