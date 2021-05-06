@@ -35,16 +35,6 @@
             </q-item-section>
           </q-item>
 
-          <q-item clickable @click="gitURL()">
-            <q-item-section avatar>
-              <q-icon name="list" />
-            </q-item-section>
-
-            <q-item-section>
-              Project Code
-            </q-item-section>
-          </q-item>
-
           <q-item clickable v-ripple @click="forCal()">
             <q-item-section avatar>
               <q-icon name="send" />
@@ -62,6 +52,16 @@
 
             <q-item-section>
               Arma 3 Fov Calculator
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable @click="gitURL()">
+            <q-item-section avatar>
+              <q-icon name="list" />
+            </q-item-section>
+
+            <q-item-section>
+              Project Code
             </q-item-section>
           </q-item>
 

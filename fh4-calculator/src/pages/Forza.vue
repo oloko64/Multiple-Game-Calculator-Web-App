@@ -1,160 +1,168 @@
 <template>
-  <q-page class="q-pa-lg row justify-center full-height full-width text-center">
-    <div class="col-md-4">
-      <div>
-        <q-input
-          class="q-pa-sm text-h6"
-          autofocus
-          @keyup="calcular()"
-          outlined
-          clearable
-          :maxlength="4"
-          name="number"
-          v-model="weight"
-          label="Weight (Kg)"
-        />
-
-        <q-input
-          class="q-pa-sm text-h6"
-          outlined
-          @keyup="calcular()"
-          clearable
-          :maxlength="2"
-          v-model="weightDis"
-          label="Weight Distribution (%)"
-        />
-
+  <q-page class="q-pa-lg">
+    <div class=" row justify-center">
+      <div class="col-12 col-md-4">
         <div>
-          <q-icon
-            @click="alertSpr = true"
-            class="icons-opt float-right cursor-pointer"
-            style="font-size: 20px;"
-            name="help"
+          <q-input
+            class="q-pa-sm text-h6"
+            autofocus
+            @keyup="calcular()"
+            outlined
+            clearable
+            :maxlength="4"
+            name="number"
+            v-model="weight"
+            label="Weight (Kg)"
           />
+
           <q-input
             class="q-pa-sm text-h6"
             outlined
             @keyup="calcular()"
             clearable
-            :value="20"
             :maxlength="2"
-            v-model="stiffness"
-            label="Spring Stiffness [Default: 20]"
+            v-model="weightDis"
+            label="Weight Distribution (%)"
           />
+
+          <div>
+            <q-icon
+              @click="alertSpr = true"
+              class="icons-opt float-right cursor-pointer"
+              style="font-size: 20px;"
+              name="help"
+            />
+            <q-input
+              class="q-pa-sm text-h6"
+              outlined
+              @keyup="calcular()"
+              clearable
+              :value="20"
+              :maxlength="2"
+              v-model="stiffness"
+              label="Spring Stiffness [Default: 20]"
+            />
+          </div>
+
+          <div>
+            <q-icon
+              @click="alertBar = true"
+              class="icons-opt float-right cursor-pointer"
+              style="font-size: 20px;"
+              name="help"
+            />
+            <q-input
+              class="q-pa-sm text-h6"
+              outlined
+              @keyup="calcular()"
+              clearable
+              :value="20"
+              :maxlength="2"
+              v-model="maxBar"
+              label="Total Damping Bar [Default: 20]"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saida de dados -->
+    <!-- <h6 class="text-weight-regular">Output </h6> -->
+    <div class="row justify-center">
+      <div class="col-12 col-md-4">
+        <p class="text-weight-regular text-body1 divisions">Damping</p>
+        <div class="">
+          <q-input
+            class="q-pa-sm text-h6"
+            clearable
+            readonly
+            v-model="damFro"
+            label="Damping Front:"
+          />
+
+          <q-input
+            class="q-pa-sm text-h6"
+            clearable
+            readonly
+            v-model="damRea"
+            label="Damping Rear:"
+          />
+        </div>
+        <div class="q-mt-lg">
+          <q-input
+            class="q-pa-sm text-h6"
+            clearable
+            readonly
+            v-model="rebFro"
+            label="Rebound Front:"
+          />
+
+          <q-input
+            class="q-pa-sm text-h6"
+            clearable
+            readonly
+            v-model="rebRea"
+            label="Rebound Rear:"
+          />
+        </div>
+      </div>
+      <div>
+        <div class="row justify-center">
+          <div class="col-12 col-md-4">
+            <p class="text-weight-regular text-body1 divisions">
+              Springs
+            </p>
+
+            <div>
+              <q-input
+                class="q-pa-sm text-h6"
+                clearable
+                readonly
+                v-model="susFro"
+                label="Suspension Front:"
+              />
+
+              <q-input
+                class="q-pa-sm text-h6"
+                clearable
+                readonly
+                v-model="susRea"
+                label="Suspension Rear:"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="cursor-pointer">
+          <p
+            class="text-weight-regular text-body1 divisions"
+            @click="alertRoll = true"
+          >
+            <q-tooltip>
+              Click me for more information
+            </q-tooltip>
+            Antiroll Bars
+            <q-icon class="icons" name="help" />
+          </p>
         </div>
 
         <div>
-          <q-icon
-            @click="alertBar = true"
-            class="icons-opt float-right cursor-pointer"
-            style="font-size: 20px;"
-            name="help"
-          />
           <q-input
             class="q-pa-sm text-h6"
-            outlined
-            @keyup="calcular()"
             clearable
-            :value="20"
-            :maxlength="2"
-            v-model="maxBar"
-            label="Total Damping Bar [Default: 20]"
+            readonly
+            v-model="rollFro"
+            label="Antiroll Front:"
+          />
+
+          <q-input
+            class="q-pa-sm text-h6"
+            clearable
+            readonly
+            v-model="rollRea"
+            label="Antiroll Rear:"
           />
         </div>
-      </div>
-
-      <!-- Saida de dados -->
-
-      <!-- <h6 class="text-weight-regular">Output </h6> -->
-
-      <p class="text-weight-regular text-body1 divisions">Damping</p>
-      <div class="">
-        <q-input
-          class="q-pa-sm text-h6"
-          clearable
-          readonly
-          v-model="damFro"
-          label="Damping Front:"
-        />
-
-        <q-input
-          class="q-pa-sm text-h6"
-          clearable
-          readonly
-          v-model="damRea"
-          label="Damping Rear:"
-        />
-      </div>
-
-      <div class="q-mt-lg">
-        <q-input
-          class="q-pa-sm text-h6"
-          clearable
-          readonly
-          v-model="rebFro"
-          label="Rebound Front:"
-        />
-
-        <q-input
-          class="q-pa-sm text-h6"
-          clearable
-          readonly
-          v-model="rebRea"
-          label="Rebound Rear:"
-        />
-      </div>
-
-      <p class="text-weight-regular text-body1 divisions">
-        Springs
-      </p>
-
-      <div>
-        <q-input
-          class="q-pa-sm text-h6"
-          clearable
-          readonly
-          v-model="susFro"
-          label="Suspension Front:"
-        />
-
-        <q-input
-          class="q-pa-sm text-h6"
-          clearable
-          readonly
-          v-model="susRea"
-          label="Suspension Rear:"
-        />
-      </div>
-
-      <div class="cursor-pointer">
-        <p
-          class="text-weight-regular text-body1 divisions"
-          @click="alertRoll = true"
-        >
-          <q-tooltip>
-            Click me for more information
-          </q-tooltip>
-          Antiroll Bars
-          <q-icon class="icons" name="help" />
-        </p>
-      </div>
-
-      <div>
-        <q-input
-          class="q-pa-sm text-h6"
-          clearable
-          readonly
-          v-model="rollFro"
-          label="Antiroll Front:"
-        />
-
-        <q-input
-          class="q-pa-sm text-h6"
-          clearable
-          readonly
-          v-model="rollRea"
-          label="Antiroll Rear:"
-        />
       </div>
     </div>
 
