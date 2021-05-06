@@ -31,5 +31,10 @@ Rebound Stiffness = max_value_bar * weight_distribution
 Bump Stiffness = Rebound Stiffness * 0.5
 
 
+# To Do
+I want to add various calculators into this app, for this reason I created a stable branch for the Tunning Calculator, and a stable branch for the Multiple Calculators app.
+
+Into the Main branch I will be testing and adding new things, and later merging to the correct branch.
+
 # Version
-Calculator version 0.10 (Alpha).
+Calculator version 0.20 (Alpha).
