@@ -11,7 +11,7 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
         <q-toolbar-title>
-          Arma 3 Fov Calculator
+          Home
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -45,13 +45,13 @@
             </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple @click="forCal()">
+          <q-item clickable v-ripple @click="fovCalc()">
             <q-item-section avatar>
               <q-icon name="send" />
             </q-item-section>
 
             <q-item-section>
-              Forza Horizon 4 Calculator
+              Arma 3 Fov Calculator
             </q-item-section>
           </q-item>
 
@@ -79,7 +79,7 @@
     </q-drawer>
 
     <q-page-container>
-      <q-img class="header-image absolute-center" src="../assets/arma3.jpg" />
+      <q-img class="header-image absolute-center" src="../assets/fh4.jpg" />
       <keep-alive>
         <router-view />
       </keep-alive>
@@ -89,7 +89,7 @@
 
 <script>
 export default {
-  name: "MainLayoutArma",
+  name: "MainLayout",
   data() {
     return {
       leftDrawerOpen: false
@@ -104,8 +104,8 @@ export default {
     otherProj() {
       window.open("https://github.com/OLoKo64");
     },
-    forCal() {
-      location.href = "/#/forza-calculator";
+    fovCalc() {
+      location.href = "/#/arma3-fov-calculator";
     },
     homeURL() {
       location.href = "/#/";

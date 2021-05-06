@@ -25,15 +25,15 @@
             <q-item-section> </q-item-section>
           </q-item>
 
-          <!-- <q-item clickable @click="homeURL()" v-ripple> -->
-            <!-- <q-item-section avatar>
+          <q-item clickable @click="homeURL()" v-ripple>
+          <q-item-section avatar>
               <q-icon name="home" />
             </q-item-section>
 
             <q-item-section>
               Home
             </q-item-section>
-          </q-item> -->
+          </q-item>
 
           <q-item clickable @click="gitURL()">
             <q-item-section avatar>
@@ -41,7 +41,7 @@
             </q-item-section>
 
             <q-item-section>
-              Formula
+              Project Code
             </q-item-section>
           </q-item>
 
@@ -104,11 +104,11 @@ export default {
     otherProj() {
       window.open("https://github.com/OLoKo64");
     },
-    // homeURL() {
-    //   location.href = "/";
-    // },
-    fovCalc(){
-            location.href = "/#/fov-calculator";
+    fovCalc() {
+      location.href = "/#/arma3-fov-calculator";
+    },
+    homeURL() {
+      location.href = "/#/";
     }
   }
 };

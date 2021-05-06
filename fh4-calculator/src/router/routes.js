@@ -2,16 +2,23 @@
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: () => import('layouts/MainLayoutHome.vue'),
     children: [
       { path: '', component: () => import('pages/Index.vue') }
     ]
   },
   {
-    path: '/fov-calculator',
+    path: '/arma3-fov-calculator',
     component: () => import('layouts/MainLayoutArma.vue'),
     children: [
       { path: '', component: () => import('pages/Arma.vue') }
+    ]
+  },
+  {
+    path: '/forza-calculator',
+    component: () => import('src/layouts/MainLayoutForza.vue'),
+    children: [
+      { path: '', component: () => import('pages/Forza.vue') }
     ]
   },
 
