@@ -2,7 +2,7 @@
   <q-page class="q-pa-lg text-center">
     <!-- Input Desired Fov -->
     <div class="row justify-center">
-      <div class="col-12 col-md-8  q-ma-lg">
+      <div class="col-12 col-md-4  q-ma-lg">
         <label class="text-h6">Insert Your Desired FOV</label><br />
         <label class="text-weight-thin">Must be between 70 and 120</label>
         <q-input
@@ -106,9 +106,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.inputs-opt {
-  margin: 10px;
-}
-</style>

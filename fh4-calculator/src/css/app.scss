@@ -1,1 +1,31 @@
 // app global css in SCSS form
+
+.bg-custom {
+  background-color: $arma;
+}
+
+.primary-custom {
+  color: $arma;
+}
+
+.header-image {
+  height: 100%;
+  z-index: -1;
+  opacity: 0.08;
+  filter: grayscale(100%);
+}
+.inputs-opt {
+  margin: 10px;
+}
+.divisions {
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+
+.icons {
+  padding-bottom: 2px;
+}
+
+.icons-opt {
+  margin-top: 27px;
+}

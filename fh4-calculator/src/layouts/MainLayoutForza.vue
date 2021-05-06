@@ -113,12 +113,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.header-image {
-  height: 100%;
-  z-index: -1;
-  opacity: 0.08;
-  filter: grayscale(100%);
-}
-</style>

@@ -259,18 +259,3 @@ export default {
   }
 };
 </script>
-
-<style lang="scss">
-.divisions {
-  margin-bottom: 0px;
-  margin-top: 50px;
-}
-
-.icons {
-  padding-bottom: 2px;
-}
-
-.icons-opt {
-  margin-top: 27px;
-}
-</style>

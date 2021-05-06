@@ -45,6 +45,16 @@
             </q-item-section>
           </q-item>
 
+          <q-item clickable v-ripple @click="forCal()">
+            <q-item-section avatar>
+              <q-icon name="send" />
+            </q-item-section>
+
+            <q-item-section>
+              Forza Horizon 4 Calculator
+            </q-item-section>
+          </q-item>
+
           <q-item clickable v-ripple @click="fovCalc()">
             <q-item-section avatar>
               <q-icon name="send" />
@@ -109,16 +119,10 @@ export default {
     },
     homeURL() {
       location.href = "/#/";
+    },
+    forCal() {
+      location.href = "/#/forza-calculator";
     }
   }
 };
 </script>
-
-<style lang="scss">
-.header-image {
-  height: 100%;
-  z-index: -1;
-  opacity: 0.08;
-  filter: grayscale(100%);
-}
-</style>
