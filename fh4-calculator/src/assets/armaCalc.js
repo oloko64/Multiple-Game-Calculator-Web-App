@@ -30,8 +30,10 @@ export function calc_value(height, width, hfov) {
 
   var fovLeft = ((fovTop / height) * width).toFixed(2);
 
-  console.log(fovTop);
-  console.log(fovLeft);
+
+  // console.log(fovTop);
+  // console.log(fovLeft);
+  return fovTop, fovLeft;
 }
 
 function ra_de(value) {
