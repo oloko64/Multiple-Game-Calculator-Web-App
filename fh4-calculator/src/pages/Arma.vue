@@ -3,8 +3,16 @@
     <!-- Input Desired Fov -->
     <div class="row justify-center">
       <div class="col-12 col-md-8  q-ma-lg">
-        <label class="text-h6">Insert Your Desired FOV</label>
-        <q-input class="text-h6" v-model="inpFov" label="Desired FOV" />
+        <label class="text-h6">Insert Your Desired FOV</label><br />
+        <label class="text-weight-thin">Must be between 70 and 120</label>
+        <q-input
+          clearable
+          mask="###"
+          class="text-h6"
+          @keyup="calcular()"
+          v-model="inpFov"
+          label="Desired FOV"
+        />
       </div>
     </div>
 
@@ -15,13 +23,23 @@
       <div class="col-12 col-md-4 q-ma-lg">
         <label class="text-weight-bolder text-h6">1920</label
         ><label> x 1080</label>
-        <q-input class="text-h6" v-model="inpWidth" label="Insert the Width" />
+        <q-input
+          clearable
+          mask="####"
+          class="text-h6"
+          @keyup="calcular()"
+          v-model="inpWidth"
+          label="Insert the Width"
+        />
       </div>
 
       <div class="col-12 col-md-4 q-ma-lg">
         <label>1920 x </label
         ><label class="text-weight-bolder text-h6">1080</label>
         <q-input
+          clearable
+          mask="####"
+          @keyup="calcular()"
           class="text-h6"
           v-model="inpHeight"
           label="Insert the Height"
@@ -30,27 +48,23 @@
     </div>
 
     <!-- Calculate Button -->
-    <q-btn class="q-ma-lg" @click="calcular()" color="primary" label="Calculate" />
+    <q-btn
+      class="q-ma-lg"
+      @click="calcular()"
+      color="primary"
+      label="Calculate"
+    />
 
     <!-- Output of Results -->
     <div class="row justify-center">
       <div class="col-12 col-md-4 q-ma-lg">
         <label class="text-h6">fovTop:</label>
-        <q-input 
-        readonly
-        class="text-h6" 
-        v-model="fovTop" 
-        label="Insert the Width" />
+        <q-input readonly class="text-h6" v-model="fovTop" label="fovTop" />
       </div>
 
       <div class="col-12 col-md-4 q-ma-lg">
-        <label class="text-h6">fovLeft</label>
-        <q-input
-          readonly
-          class="text-h6"
-          v-model="fovLeft"
-          label="Insert the Height"
-        />
+        <label class="text-h6">fovLeft:</label>
+        <q-input readonly class="text-h6" v-model="fovLeft" label="fovLeft" />
       </div>
     </div>
   </q-page>
@@ -72,8 +86,22 @@ export default {
   },
   methods: {
     calcular() {
+      if (this.inpHeight == "0" || this.inpHeight == "") {
+        return;
+      }
+
+      if (this.inpWidth == "0" || this.inpWidth == "") {
+        return;
+      }
+
+      if (this.inpFov == "0" || this.inpFov == "") {
+        return;
+      }
+
       // this.fovTop = ext.calc_value((this.inpHeight, this.inpWidth, this.inpFov));
-      console.log(ext.calc_value(this.inpHeight, this.inpWidth, this.inpFov));
+      let fovRes = ext.calc_value(this.inpHeight, this.inpWidth, this.inpFov);
+      this.fovTop = fovRes[0];
+      this.fovLeft = fovRes[1];
     }
   }
 };

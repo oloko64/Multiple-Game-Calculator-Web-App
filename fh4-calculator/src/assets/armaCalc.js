@@ -1,19 +1,5 @@
 export function calc_value(height, width, hfov) {
-  if (height == "0" || height == "") {
-    alert("'Height value' field is not filled.");
-    return;
-  }
-
-  if (width == "0" || width == "") {
-    alert("'Width value' field is not filled.");
-    return;
-  }
-
-  if (hfov == "0" || hfov == "") {
-    alert("'FOV angle' field is not filled.");
-    return;
-  }
-
+  
   // convert to radians
   var hfovRad = de_ra(hfov);
 
@@ -32,8 +18,8 @@ export function calc_value(height, width, hfov) {
 
 
   // console.log(fovTop);
-  // console.log(fovLeft);
-  return fovTop, fovLeft;
+
+  return [fovTop, fovLeft]
 }
 
 function ra_de(value) {
