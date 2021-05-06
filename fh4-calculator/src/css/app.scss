@@ -1,7 +1,11 @@
 // app global css in SCSS form
 
 .bg-custom {
-  background-color: $green-10;
+  background-color: $armaGreen;
+}
+
+.bg-home{
+  background-color: $homeColor;
 }
 
 .header-image {
