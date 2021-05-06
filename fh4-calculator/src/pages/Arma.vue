@@ -6,6 +6,7 @@
         <label class="text-h6">Insert Your Desired FOV</label><br />
         <label class="text-weight-thin">Must be between 70 and 120</label>
         <q-input
+          color="green-10"
           clearable
           mask="###"
           class="text-h6"
@@ -24,6 +25,7 @@
         <label class="text-weight-bolder text-h6">1920</label
         ><label> x 1080</label>
         <q-input
+        color="green-10"
           clearable
           mask="####"
           class="text-h6"
@@ -37,6 +39,7 @@
         <label>1920 x </label
         ><label class="text-weight-bolder text-h6">1080</label>
         <q-input
+        color="green-10"
           clearable
           mask="####"
           @keyup="calcular()"
@@ -51,7 +54,7 @@
     <q-btn
       class="q-ma-lg"
       @click="calcular()"
-      color="primary"
+      color="green-10"
       label="Calculate"
     />
 
