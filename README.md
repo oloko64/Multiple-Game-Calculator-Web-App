@@ -41,8 +41,8 @@ This is used to calculate the Fov in Arma 3 as it doesn't have in game.
 
 1. Go to C:\Users\[your_username]\Documents\Arma 3
 2. Open [your_username].Arma3Profile with text editor of your choice (I recommend notepad++)
-3. Find fovTop and set it to what the calculator tells you   Ex. (fovTop=1.03;)
-4. Find fovLeft and set it to what the calculator tells you  Ex. (fovLeft=1.83;)
+3. Find fovTop and set it to what the calculator tells you.   Ex. (fovTop=1.03;)
+4. Find fovLeft and set it to what the calculator tells you.  Ex. (fovLeft=1.83;)
 5. While we are here you may as well turn off smoothing and acceleration, find mouseSmoothing and mouseAcceleration, set both to 0 (mouseSmoothing=0; mouseAcceleration=0;)
 6. Save changes and close file
 
