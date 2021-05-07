@@ -7,7 +7,7 @@ I sure will be adding more in the future. Stay tunned and if you wanna help just
 1. Go to https://gamecalculator.netlify.app/
 
 
-# Forza-Horizon-4-Tunning-Calculator-Quasar
+# Forza Horizon 4 Tunning Calculator
 
 After some time doing the calculations by hand i decided to create this script, it is complete Web based and don't have any requirements.
 
@@ -47,4 +47,4 @@ This is used to calculate the Fov in Arma 3 as it doesn't have in game.
 6. Save changes and close file
 
 # Version
-Calculator version 0.30 (Alpha).
+Calculator version 1.0.1.
