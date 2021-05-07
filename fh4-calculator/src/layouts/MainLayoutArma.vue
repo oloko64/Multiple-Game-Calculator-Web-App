@@ -98,7 +98,7 @@ export default {
   methods: {
     gitURL() {
       window.open(
-        "https://github.com/OLoKo64/Forza-Horizon-4-Tunning-Calculator-Quasar"
+        "https://github.com/OLoKo64/Multiple-Game-Calculator-Web-App"
       );
     },
     otherProj() {
