@@ -1,4 +1,4 @@
-# forza-horizon-4-tunning-calculator (fh4-calc)
+# OLoKo64-Game-Calculator (game-calc)
 
 A Quasar Framework app
 
