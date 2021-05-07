@@ -70,6 +70,63 @@
     <!-- <h6 class="text-weight-regular">Output </h6> -->
     <div class="row justify-center text-center">
       <div class="col-12 col-md-4">
+        <div class="cursor-pointer">
+          <p
+            class="text-weight-regular text-body1 divisions"
+            @click="alertRoll = true"
+          >
+            <q-tooltip>
+              Click me for more information
+            </q-tooltip>
+            Antiroll Bars
+            <q-icon class="icons" name="help" />
+          </p>
+        </div>
+
+        <div>
+          <q-input
+            class="q-pa-sm text-h6"
+            clearable
+            readonly
+            v-model="rollFro"
+            label="Antiroll Front:"
+          />
+
+          <q-input
+            class="q-pa-sm text-h6"
+            clearable
+            readonly
+            v-model="rollRea"
+            label="Antiroll Rear:"
+          />
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
+        <p class="text-weight-regular text-body1 divisions">
+          Springs
+        </p>
+
+        <div>
+          <q-input
+            class="q-pa-sm text-h6"
+            clearable
+            readonly
+            v-model="susFro"
+            label="Suspension Front:"
+          />
+
+          <q-input
+            class="q-pa-sm text-h6"
+            clearable
+            readonly
+            v-model="susRea"
+            label="Suspension Rear:"
+          />
+        </div>
+      </div>
+
+      <div class="col-12 col-md-4">
         <p class="text-weight-regular text-body1 divisions">Damping</p>
         <div class="">
           <q-input
@@ -103,62 +160,6 @@
             readonly
             v-model="rebRea"
             label="Rebound Rear:"
-          />
-        </div>
-      </div>
-      <div class="col-12 col-md-4">
-        <p class="text-weight-regular text-body1 divisions">
-          Springs
-        </p>
-
-        <div>
-          <q-input
-            class="q-pa-sm text-h6"
-            clearable
-            readonly
-            v-model="susFro"
-            label="Suspension Front:"
-          />
-
-          <q-input
-            class="q-pa-sm text-h6"
-            clearable
-            readonly
-            v-model="susRea"
-            label="Suspension Rear:"
-          />
-        </div>
-      </div>
-
-      <div class="col-12 col-md-4">
-        <div class="cursor-pointer">
-          <p
-            class="text-weight-regular text-body1 divisions"
-            @click="alertRoll = true"
-          >
-            <q-tooltip>
-              Click me for more information
-            </q-tooltip>
-            Antiroll Bars
-            <q-icon class="icons" name="help" />
-          </p>
-        </div>
-
-        <div>
-          <q-input
-            class="q-pa-sm text-h6"
-            clearable
-            readonly
-            v-model="rollFro"
-            label="Antiroll Front:"
-          />
-
-          <q-input
-            class="q-pa-sm text-h6"
-            clearable
-            readonly
-            v-model="rollRea"
-            label="Antiroll Rear:"
           />
         </div>
       </div>
