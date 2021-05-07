@@ -113,11 +113,11 @@ module.exports = function (/* ctx */) {
       workboxPluginMode: 'GenerateSW', // 'GenerateSW' or 'InjectManifest'
       workboxOptions: {}, // only for GenerateSW
       manifest: {
-        name: `Forza Horizon 4 Tunning Calculator`,
-        short_name: `FH4 Tunning Calcuator`,
-        description: `A Basic Tunning Calculator`,
+        name: `OLoKo64 Game Calculator`,
+        short_name: `Game Calculator`,
+        description: `A Basic Calculator For Various Games`,
         display: 'standalone',
-        orientation: 'portrait',
+        orientation: 'any',
         background_color: '#000000',
         theme_color: '#027be3',
         icons: [

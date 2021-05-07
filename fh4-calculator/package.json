@@ -1,9 +1,9 @@
 {
-  "name": "fh4-calc",
-  "version": "0.0.1",
-  "description": "A Quasar Framework app",
-  "productName": "Forza Horizon 4 Tunning Calculator",
-  "author": "OLoko64 <naldoepingo1@gmail.com>",
+  "name": "game-calculator",
+  "version": "0.1.9",
+  "description": "Game Calculator For Various Games",
+  "productName": "OLoKo64 Game Calculator",
+  "author": "OLoko64 <reinaldorozatoj@gmail.com>",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
