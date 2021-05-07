@@ -89,7 +89,7 @@
     </q-drawer>
 
     <q-page-container>
-      <q-img class="header-image absolute-center" src="../assets/fh4.jpg" />
+      <q-img class="header-image absolute-center" src="../assets/home2.jpg" />
       <keep-alive>
         <router-view />
       </keep-alive>
