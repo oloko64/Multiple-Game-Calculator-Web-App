@@ -1,12 +1,17 @@
+# OLoKo64 Game Calculator
+The idea is to concentrate in one place the most commons game calculators. 
+
+I sure will be adding more in the future. Stay tunned and if you wanna help just contact me.
+
+# How to use it
+1. Go to https://gamecalculator.netlify.app/
+
+
 # Forza-Horizon-4-Tunning-Calculator-Quasar
 
 After some time doing the calculations by hand i decided to create this script, it is complete Web based and don't have any requirements.
 
 The results of this calculator are NOT 100% precise, driving preference, style and car by car variance are not measured. This is a base for you to start at, taking account weight distribution of the car.
-
-
-# How to use it
-1. Go to https://forza-h4-calculator.netlify.app
 
 2. Use it.
 
